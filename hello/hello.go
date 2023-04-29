@@ -40,12 +40,14 @@ func main() {
     log.SetFlags(0)
 
     // Request a greeting message.
-    message, err := greetings.Hello("")
-    // If an error was returned, log the error and exit the program.
+    message, err := greetings.Hello("Gladys")
+    // If an error was returned, print it to the console and
+    // exit the program.
     if err != nil {
         log.Fatal(err)
     }
 
-    // Print the returned message to the console.
+    // If no error was returned, print the returned message
+    // to the console.
     fmt.Println(message)
 }
